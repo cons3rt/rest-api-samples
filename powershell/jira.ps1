@@ -174,7 +174,7 @@ function Send-Initial-Request() {
 
         # Set the error message
         if ($null -eq $apiResponse.StatusCode) {
-            $msg += "ERROR: [$method] request to URI [$requestUri] encountered an error (probably no http status code)"
+            $msg += "ERROR: [$method] request to URI [$requestUri] encountered an error, probably no http status code"
         } else {
             $msg += "ERROR: [$method] request to URI [$requestUri] returned error code: [$($apiResponse.StatusCode)]"
         }
